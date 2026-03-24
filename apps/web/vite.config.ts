@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import solid from 'vite-plugin-solid'
-import { TanStackRouterVite } from '@tanstack/router-plugin/vite'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   server: {
@@ -10,7 +10,7 @@ export default defineConfig({
     tsconfigPaths: true,
   },
   plugins: [
-    TanStackRouterVite(),
+    tailwindcss(),
     solid({ssr:true})
   ],
 })
