@@ -1,3 +1,4 @@
+restclient
 
 # Editor directories and files
 .vscode
@@ -10,3 +11,4 @@
 *.njsproj
 *.sln
 *.sw
+
