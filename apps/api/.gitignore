@@ -1,5 +1,7 @@
 restclient
 
+.env
+
 # Editor directories and files
 .vscode
 .vscode/*

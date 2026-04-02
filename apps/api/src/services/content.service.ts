@@ -1,4 +1,4 @@
-import { I_Article } from "../cms/types.ts";
+import { I_CollectionItemArticle } from "../cms/types.ts";
 
 
 /**
@@ -6,8 +6,8 @@ import { I_Article } from "../cms/types.ts";
  * 
  * 
  */
-export const getArticles = async():Promise<I_Article[]> => {
-    const articles:I_Article[] = [];
+export const getArticles = async():Promise<I_CollectionItemArticle[]> => {
+    const articles:I_CollectionItemArticle[] = [];
 
     return articles;
 }
