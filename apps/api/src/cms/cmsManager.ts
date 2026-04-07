@@ -4,10 +4,10 @@ import { I_CMSAdapter, I_CMSConfig, T_CMSType } from "./types.ts";
 
 type T_CMSAdapterConstructor = new (config: I_CMSConfig) => I_CMSAdapter;
 
-const adapterMap:Partial<Record<T_CMSType, T_CMSAdapterConstructor>> = {
+const adapterMap={
     directus: DirectusAdapter,
     strapi: StrapiAdapter,
-}
+} satisfies Partial<Record<T_CMSType, T_CMSAdapterConstructor>>
 
 export const createCMS = (config:I_CMSConfig) : I_CMSAdapter => {
     const AdapterClass = adapterMap[config.type];
