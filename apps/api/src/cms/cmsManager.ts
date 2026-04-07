@@ -10,7 +10,7 @@ const adapterMap={
 } satisfies Partial<Record<T_CMSType, T_CMSAdapterConstructor>>
 
 export const createCMS = (config:I_CMSConfig) : I_CMSAdapter => {
-    const AdapterClass = adapterMap[config.type];
+    const AdapterClass: T_CMSAdapterConstructor = adapterMap[config.type as keyof typeof adapterMap];
     
     if (!AdapterClass)
         throw new Error(`CMS ${config.type} is not supported`)

@@ -2,7 +2,7 @@ export interface I_CMSAdapter {
     getCollection(collectionName:string):Promise<unknown[]>
 }
 
-export type T_CMSType = 'contentful' | 'directus' | 'strapi' | 'custom'  
+export type T_CMSType = 'contentful' | 'directus' | 'strapi' | 'custom' | 'none' 
 
 export interface I_CMSConfig {
     type: T_CMSType,

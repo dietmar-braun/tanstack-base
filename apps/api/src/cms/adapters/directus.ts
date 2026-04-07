@@ -7,11 +7,21 @@ export class DirectusAdapter extends BaseAdapter implements I_CMSAdapter {
     }
 
     async getCollection(collectionName: string): Promise<unknown[]> {
-        const response = await fetch(`${this.config.baseUrl}/items/${collectionName}`, {
-            headers: { Authorization: `Bearer ${this.config.apiKey}` }
-        });
+        let response:unknown[] = []
+        
+        try {
+            const response = await fetch(`${this.config.baseUrl}/items/${collectionName}`, {
+                headers: { Authorization: `Bearer ${this.config.apiKey}` }
+            });
 
-        const json = await response.json();
-        return json.data; // Directus-spezifisches Mapping
+            const json = await response.json();
+            return json.data; // Directus-spezifisches Mapping
+        }
+        catch (exception: unknown){
+            const error: Error = exception as Error;
+            console.error(error.message)
+        }
+
+        return response;
     }
 }
