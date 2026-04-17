@@ -1,6 +1,6 @@
 import {createSignal, onMount} from 'solid-js'
 import { Link } from '@tanstack/solid-router'
-import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from "@suid/icons-material/Menu";;
 
  const Navbar = () => {
   return (
