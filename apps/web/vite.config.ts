@@ -1,6 +1,5 @@
 import { defineConfig } from 'vite';
 import solid from 'vite-plugin-solid';
-import solidPlugin from "@suid/vite-plugin";
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
@@ -12,7 +11,6 @@ export default defineConfig({
   },
   plugins: [
     tailwindcss(),
-    solid({ssr:true}),
-    solidPlugin()
+    solid({ssr:true})
   ],
 })
