@@ -5,13 +5,13 @@ import { VsHome } from 'solid-icons/vs'
 import { VsMenu } from 'solid-icons/vs'
 
  const Navbar = () => {
+const [openState, setOpenState] = createSignal(false)
   return (
-    <nav>
-      <VsMenu />
-      <ul>
+    <nav class="flex justify-center">
+      <VsMenu  />
+      <ul class={`${openState === false ? 'hide' : ''}`}>
         <li>
-          <VsHome />
-          <Link to="/">Home</Link>
+          <Link to="/"><VsHome />Home</Link>
         </li>
       </ul>
       
