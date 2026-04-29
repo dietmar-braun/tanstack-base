@@ -3,9 +3,11 @@ import Header from '../components/layout/header'
 
 export const Route = createRootRoute({
   component: () => (
-    <div>
-      <Header />
-      <Outlet />
-    </div>
+
+        <div>
+          <Header />
+          <Outlet />
+        </div>
+
   ),
 })
