@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
 @import "tailwindcss";
 @plugin "daisyui" {
-  themes: dim --default, dark --prefersdark;
-  root: ":root";
-  include: ;
-  exclude: ;
-  prefix: ;
-  logs: true;
+  themes: emerald --default, sunset --prefersdark, dim, sunset;
+
+}
+
+@theme {
+  --font-header: "Anton SC", sans-serif;
+  --font-header--font-feature-settings: "cv02", "cv03", "cv04", "cv11"; 
+  --font-header--font-variation-settings: "opsz" 32; 
 }
